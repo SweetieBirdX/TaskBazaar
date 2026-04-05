@@ -17,6 +17,7 @@ contract/target/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 
