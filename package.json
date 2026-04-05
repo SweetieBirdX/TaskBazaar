@@ -1,0 +1,20 @@
+{
+  "name": "taskbazaar",
+  "private": true,
+  "workspaces": [
+    "orchestrator",
+    "agents/*",
+    "dashboard",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"cd agents/scraper && npm run dev\" \"cd agents/analyzer && npm run dev\" \"cd agents/reporter && npm run dev\" \"cd orchestrator && npm run dev\" \"cd dashboard && npm run dev\"",
+    "register-agents": "tsx scripts/register-agents.ts",
+    "test:e2e": "tsx scripts/e2e-test.ts"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
